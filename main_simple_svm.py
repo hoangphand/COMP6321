@@ -54,17 +54,6 @@ for i in range(len(test_label)):
 		tmp_projector_of_test[j] = sum
 	projector_of_test[i] = tmp_projector_of_test
 
-# FIND BEST PARAMS
-# c_range = numpy.logspace(-2, 10, 13)
-# gamma_range = numpy.logspace(-9, 3, 13)
-# param_grid = dict(gamma = gamma_range, C = c_range)
-# cv = StratifiedShuffleSplit(n_splits = 5, test_size = 0.2, random_state = 42)
-# grid = GridSearchCV(SVC(), param_grid = param_grid, cv = cv)
-# grid.fit(projector_of_training, training_label)
-
-# print("The best parameters are %s with a score of %0.2f"
-#       % (grid.best_params_, grid.best_score_))
-
 # TRAINING SVM
 c = 1000
 gamma = 1e-09
